@@ -1,11 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Aside } from './components/Aside';
 
 function App() {
   return (
     <div className="App">
-      <h1>Initial</h1>
+     <Aside/>
     </div>
   );
 }
