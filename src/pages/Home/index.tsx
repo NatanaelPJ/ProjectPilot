@@ -1,13 +1,23 @@
-import React from "react"
+import React,{useState} from "react";
+import SlideShow from "../../components/SlideShow";
+
+import { Container } from "./styles"
 import restaurant from "../../assets/restaurant.png"
+import hotel from "../../assets/hotel.png"
 
-export function Home() {
 
+export default function Home( ) {
+  const [autoPlay] = useState(true)
+  const [duration] = useState(1000)
 
+  const slideImages = [
+    restaurant, 
+    hotel
+  ]
 
   return(
     <>
-        
+      <SlideShow autoPlay={autoPlay} duration={duration} slideImages={slideImages} />
     </>
   )
 }
