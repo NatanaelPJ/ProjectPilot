@@ -5,7 +5,6 @@ export function Aside() {
     <>
       <ul>
         <li>
-
         </li>
         <li>
           <icon.MdHome size={20}/>
@@ -20,7 +19,6 @@ export function Aside() {
           <icon.MdLocationPin size={20}/>
         </li>
         <li>
-
         </li>
       </ul>
     </>
