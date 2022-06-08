@@ -7,6 +7,7 @@ export const Container = styled.main`
   justify-content: center;
   background-size: cover;
   height: 100vh;
+  
 `
 
 export const Presentation = styled.header`
@@ -28,17 +29,28 @@ export const Presentation = styled.header`
 
 export const Navigation = styled.div`
   max-width: 30.87em;
-  width: 100%;
+  width: 80%;
   margin-top: 4.6em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+ 
 
   a{
+    width: 100%;
     background: white;
-    padding: 1em 4em;
+    padding: 1em;
+    text-align: center;
     text-transform: uppercase;
     font-size: 1.2em;
     color: black;
+    transition:  1s;
+
+    &:hover{
+      filter: brightness(0.8);
+      
+    }
 
   }
 
