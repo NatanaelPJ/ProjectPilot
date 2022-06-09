@@ -27,7 +27,7 @@ export const Presentation = styled.header`
   }
 `
 
-export const Navigation = styled.div`
+export const Navigation = styled.nav`
   max-width: 30.87em;
   width: 80%;
   margin-top: 4.6em;

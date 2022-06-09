@@ -1,7 +1,17 @@
+import { Aside } from "../../components/Aside";
+import { Container, Content } from "./styles";
+
 export default function Menu(){
   return (
     <>
-      <h1>menu</h1>
+      <Container>
+        <Aside/>
+        <Content>
+          <h1>SUSHI FOOD</h1>
+          <div>aaa</div> 
+          <button>more info</button> 
+        </Content>
+      </Container>
     </>
   )
 }
