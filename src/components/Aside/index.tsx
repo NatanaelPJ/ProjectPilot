@@ -20,7 +20,7 @@ export function Aside() {
             </a>
           </li>
           <li>
-            <a> 
+            <a href='/cart'> 
               <icon.MdLocalGroceryStore size={40}/>
             </a>
           </li>

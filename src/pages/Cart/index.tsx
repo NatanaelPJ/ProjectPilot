@@ -1,7 +1,16 @@
-export function Cart(){
+import { Aside } from "../../components/Aside";
+import { Container, Content } from "./styles";
+
+export default function Cart(){
   return(
     <>
-      <h1>Cart page</h1>
+      <Container>
+        <Aside/>
+        <Content>
+          <h1>Cart</h1>
+          <div>aaa</div> 
+        </Content>
+      </Container>
     </>
   )
 }
