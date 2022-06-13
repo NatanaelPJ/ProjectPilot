@@ -1,7 +1,7 @@
 import * as icon from 'react-icons/md'
 import { Container } from './style'
 
-export function Aside() {
+export default function Aside() {
   return(
     <>
       <Container>

@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.aside`
-  max-width: 5.8em;
-  width: 100%;
+  min-width: 5.8em;
+  max-width: 6em;
   height: 100%;
   background: black;
   color: white;
   border-radius: 1em;
   
-
   ul,
   li{
     width: 100%;
