@@ -6,7 +6,6 @@ export const Container = styled.main`
   display: flex;
   align-items: center;
   gap: 2em;
-
 `
 
 export const Content = styled.section`

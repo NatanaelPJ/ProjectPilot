@@ -1,6 +1,7 @@
 import { Aside } from "../../components/Aside";
-import { Container, Content } from "./styles";
+import { Container, Content, PriceTable, ProductTable } from "./styles";
 import * as icon from 'react-icons/md'
+import Footer from "../../components/Footer";
 
 export default function Cart(){
   return(
@@ -10,7 +11,7 @@ export default function Cart(){
         <Content>
           <h1>Cart</h1>
           <div>
-            <table>
+            <ProductTable>
               <tbody>
                 <tr>
                   <td>
@@ -25,8 +26,6 @@ export default function Cart(){
                       <button
                         type="button"
                         data-testid="decrement-product"
-                     
-                      
                       >
                         <icon.MdRemoveCircleOutline size={20} />
                       </button>
@@ -57,10 +56,16 @@ export default function Cart(){
                   </td>
                 </tr>
               </tbody>
-            </table>  
+            </ProductTable>  
+
+            <PriceTable>
+              <h1>preco</h1>
+            </PriceTable>
           </div> 
+          <Footer/>
         </Content>
       </Container>
+     
     </>
   )
 }

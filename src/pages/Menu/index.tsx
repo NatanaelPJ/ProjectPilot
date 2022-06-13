@@ -1,10 +1,11 @@
 import { Aside } from "../../components/Aside";
+import Footer from "../../components/Footer";
 import { Container, Content } from "./styles";
 
 export default function Menu(){
   return (
     <>
-      <Container>
+      <Container>  
         <Aside/>
         <Content>
           <h1>SUSHI FOOD</h1>
@@ -12,6 +13,7 @@ export default function Menu(){
           <button>more info</button> 
         </Content>
       </Container>
+    
     </>
   )
 }

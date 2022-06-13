@@ -23,7 +23,25 @@ export const Content = styled.section`
 
   div{
     margin-top: 3em;
+    display: flex;
     flex: 1;
+    gap: 2em;
   }
 
+`
+
+
+
+export const ProductTable = styled.table`
+  max-height: 38em;
+  flex: 1;
+  background: gray;
+  display: flex;
+  
+`
+
+export const PriceTable = styled.table`
+  max-height: 38em;
+  flex: 1;
+  background: red;
 `
