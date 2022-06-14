@@ -465,23 +465,18 @@ export default function Cart(){
             <div className="divider"></div>
 
             <PriceTable>
-              <div>
+              <div className="wrapper-text">
                 <strong>Your Subtotal</strong>
-                <div>
-                  <span>Subtotal</span>
-                  $80.00
-                </div>
-                <button>
+                <span>Subtotal:  $80.00</span>
+              </div>
+              <button>
                   Confirm Order
-                </button>
-              </div>
-              <div>
-
-              </div>
+              </button>
             </PriceTable>
           </div> 
           <Footer/>
         </Content>
+    
       </Container>
      
     </>

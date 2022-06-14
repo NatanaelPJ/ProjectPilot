@@ -4,7 +4,7 @@ export default function Footer(){
   return (
     <>
       <Container>
-        <p>Footer</p>
+        <p>Copyright © 2021 Sushi Restaurant</p>
       </Container>
     </>
   )

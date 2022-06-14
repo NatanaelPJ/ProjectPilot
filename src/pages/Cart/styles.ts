@@ -7,10 +7,12 @@ export const Container = styled.main`
   display: flex;
   align-items: center;
   gap: 2em;
+
+
+  
 `
 
 export const Content = styled.section`
-
   width: 100%;
   height: 100%;
   display: flex;
@@ -24,15 +26,15 @@ export const Content = styled.section`
   }
 
   .box{
-    margin-top: 3em;
+    margin-top: 2em;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    flex: 1;
-    padding:0 1em;
-
+    background: #F1D5BB;
+    padding: 0 1em;
 
     .divider{
-      padding:0 1em;
+      margin: 1em 0;
       height: 1px;
       width: 100%;
       background: black;
@@ -42,29 +44,30 @@ export const Content = styled.section`
 `
 
 export const ProductTable = styled.table`
-  flex: 2;
-  background: #F1D5BB;
+  height: 25em;
   display: flex;
-  
+  overflow-y: auto;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+
 
   tbody{
-    height: 27.5em;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1em;
-    overflow-y: auto;
-    padding: 1em;
   }
 
   tr{
-    background: red;
-    display: flex;
-    
     width: 100%;
+    display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 1em;
+    padding: 1em 0;
+  
   }
 
   td img{
@@ -96,7 +99,31 @@ export const ProductTable = styled.table`
 `
 
 export const PriceTable = styled.table`
-  flex: 1;
+
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #F1D5BB;
+
+  .wrapper-text{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    strong{
+      font-size: 1.5em;
+    }
+
+    span{
+      font-size: 1.2em;
+    }
+  }
+
+  button{
+  
+    margin: 1em 0;
+    padding: 0.5em 1em;
+  }
 `

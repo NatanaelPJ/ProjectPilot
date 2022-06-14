@@ -22,7 +22,7 @@ export const Content = styled.section`
   }
 
   div{
-    margin-top: 3em;
+    margin-top: 2em;
     flex: 1;
   }
 
