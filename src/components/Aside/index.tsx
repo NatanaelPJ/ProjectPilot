@@ -10,7 +10,7 @@ export default function Aside() {
             Uma logo
           </li>
           <li>
-            <a>
+            <a href='/'>
               <icon.MdHome size={40}/>
             </a>
           </li>
@@ -30,7 +30,7 @@ export default function Aside() {
             </a>
           </li>
           <li>
-            <a> 
+            <a href='/'> 
               <icon.MdExitToApp size={30} />
             </a>
           </li>

@@ -9,7 +9,11 @@ export default function Menu(){
         <Aside/>
         <Content>
           <h1>SUSHI FOOD</h1>
-          <div>aaa</div> 
+          <div className="content-products">
+            <div className="product">
+              
+            </div>  
+          </div> 
           <button>more info</button> 
         </Content>
       </Container>

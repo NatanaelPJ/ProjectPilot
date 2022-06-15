@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.main`
   padding:1em;
+  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -21,9 +22,17 @@ export const Content = styled.section`
     font-size: 3.12em;
   }
 
-  div{
+  .content-products{
     margin-top: 2em;
     flex: 1;
+    background: blue;
+    padding: 1em;
+
+    .product{
+      background: red;
+      width: 100%;
+      height: 100%;
+    }
   }
 
 

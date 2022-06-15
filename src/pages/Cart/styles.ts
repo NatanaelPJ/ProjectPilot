@@ -27,7 +27,8 @@ export const Content = styled.section`
 
   .box{
     margin-top: 2em;
-    height: 80%;
+    width: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     background: #F1D5BB;
@@ -44,16 +45,16 @@ export const Content = styled.section`
 `
 
 export const ProductTable = styled.table`
-  height: 25em;
+  flex: 1;
+
   display: flex;
   overflow-y: auto;
   &::-webkit-scrollbar{
     display: none;
   }
 
-
-
   tbody{
+    max-height: 22em;
     width: 100%;
     display: flex;
     flex-direction: column;
