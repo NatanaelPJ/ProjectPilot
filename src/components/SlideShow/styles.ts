@@ -7,7 +7,6 @@ export const Container = styled.main`
   justify-content: center;
   background-size: cover;
   height: 100vh;
-  
 `
 
 export const Presentation = styled.header`
@@ -35,7 +34,6 @@ export const Navigation = styled.nav`
   justify-content: space-between;
   align-items: center;
   gap: 2em;
- 
 
   a{
     width: 100%;
@@ -48,10 +46,7 @@ export const Navigation = styled.nav`
     transition:  1s;
 
     &:hover{
-      filter: brightness(0.8);
-      
+      filter: brightness(0.8); 
     }
-
   }
-
 `

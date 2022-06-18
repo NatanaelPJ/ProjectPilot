@@ -1,4 +1,4 @@
-import { Slide } from 'react-slideshow-image';
+import { Slide} from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 
 import { Container, Navigation, Presentation } from './styles';
@@ -30,7 +30,6 @@ export default function SlideShow( props: HomeProps){
           </Container>
         ))}
       </Slide>
-     
     </>
   )
 }

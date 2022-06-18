@@ -6,10 +6,7 @@ export const Container = styled.main`
   height: 100vh;
   display: flex;
   align-items: center;
-  gap: 2em;
-
-
-  
+  gap: 2em;  
 `
 
 export const Content = styled.section`
@@ -18,7 +15,6 @@ export const Content = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 
   h1{
     text-align: left;
@@ -41,14 +37,13 @@ export const Content = styled.section`
       background: black;
     }
   }
-
 `
 
 export const ProductTable = styled.table`
   flex: 1;
-
   display: flex;
   overflow-y: auto;
+
   &::-webkit-scrollbar{
     display: none;
   }
@@ -68,7 +63,6 @@ export const ProductTable = styled.table`
     justify-content: space-between;
     gap: 1em;
     padding: 1em 0;
-  
   }
 
   td img{
@@ -90,7 +84,6 @@ export const ProductTable = styled.table`
       border: none;
     }
 
-
     input{
       max-width: 3em;
       min-width: 2.5em;
@@ -99,8 +92,7 @@ export const ProductTable = styled.table`
   }
 `
 
-export const PriceTable = styled.table`
-
+export const PriceTable = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,7 +104,6 @@ export const PriceTable = styled.table`
     align-items: center;
     justify-content: space-between;
 
-
     strong{
       font-size: 1.5em;
     }
@@ -123,7 +114,6 @@ export const PriceTable = styled.table`
   }
 
   button{
-  
     margin: 1em 0;
     padding: 0.5em 1em;
   }

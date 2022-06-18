@@ -16,7 +16,6 @@ export const Content = styled.section`
   flex-direction: column;
   justify-content: center;
   
-  
   h1{
     text-align: left;
     font-size: 3.12em;
@@ -29,12 +28,11 @@ export const Content = styled.section`
     padding: 1em;
 
     .product{
+      width: 300px;
+      height: 300px;
       background: red;
-      width: 100%;
-      height: 100%;
     }
   }
-
 
   button{
     margin-top: 2em;
@@ -43,5 +41,4 @@ export const Content = styled.section`
     width: 100%;
     padding: 1em;
   }
-
 `
