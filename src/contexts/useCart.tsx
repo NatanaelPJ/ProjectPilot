@@ -25,9 +25,11 @@ export function CartProvider({children} : CartProviderProps): JSX.Element{
 
 
   return (
-   <CartContext.Provider value={{cart}}>
-    {children}
-   </CartContext.Provider>
+    <>
+      <CartContext.Provider>
+        {children}
+      </CartContext.Provider>
+    </>
   )
 }
 
