@@ -21,9 +21,18 @@ const CartContext = createContext<CartContextData>({} as CartContextData);
 
 
 export function CartProvider({children} : CartProviderProps): JSX.Element{
+  const [cart, setCart] = useState<Product[]>([])
+
+
   return (
-   <CartContext.Provider>
-   
+   <CartContext.Provider value={{cart}}>
+    {children}
    </CartContext.Provider>
   )
+}
+
+export function useCart(): CartContextData {
+  const context = useContext(CartContext);
+
+  return context;
 }
