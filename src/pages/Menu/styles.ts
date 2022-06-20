@@ -26,12 +26,16 @@ export const Content = styled.section`
     flex: 1;
     background: blue;
     padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1f;
+    grid-auto-flow: row;
 
-    .product{
-      width: 300px;
-      height: 300px;
-      background: red;
+
+    img{
+      width: 10em;
+      height: 10em;
     }
+    
   }
 
   button{

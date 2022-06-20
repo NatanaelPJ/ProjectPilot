@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import Aside from "../../components/Aside";
-import Footer from "../../components/Footer";
-import { api } from "../../services/api";
 import { getFoods } from "../../services/server/food";
 import { Product } from "../../services/server/food/types";
 import { Container, Content } from "./styles";
-
+import img from '../../assets/Ellipse5.png'
 export default function Menu(){
 
   const [foods, setFoods] = useState<Product[]>([])
@@ -28,11 +26,12 @@ export default function Menu(){
         <Content>
           <h1>SUSHI FOOD</h1>
           <div className="content-products">
-            {foods.map(item => (
-              <article key={item.id} className='product'>
-                <img src={item.img} alt='' />
-              </article>
-            ))}
+            <img src={img} alt="" />
+            <img src={img} alt="" />
+            <img src={img} alt="" />
+            <img src={img} alt="" />
+            <img src={img} alt="" />
+            <img src={img} alt="" />
           </div> 
           <button>more info</button> 
         </Content>
