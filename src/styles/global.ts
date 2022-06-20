@@ -10,7 +10,14 @@ export const GlobalStyle = createGlobalStyle`
   body{
     height: 100vh;
     overflow: hidden;
+    font-size: 100%;
+
+    @media (max-width: 768px) {
+      font-size: 86.5%;
+    }
   }
+
+  
 
   a{
     text-decoration: none;

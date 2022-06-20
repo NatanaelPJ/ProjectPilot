@@ -22,26 +22,46 @@ export const Content = styled.section`
   }
 
   .content-products{
+    width: 100%;
     margin-top: 2em;
     flex: 1;
-    background: blue;
+    background: red;
     padding: 1em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1f;
-    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    overflow-y: auto;
 
-
-    img{
-      width: 10em;
-      height: 10em;
-    }
+    &::-webkit-scrollbar{
+    display: none;
+  }
     
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    div{
+      
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      
+      span{
+        margin-top: 0.5em;
+        text-align: center;
+      }
+
+      img{
+        max-height: 15em;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
   button{
-    margin-top: 2em;
     margin: 0 auto;
-    max-width: 12em;
     width: 100%;
     padding: 1em;
   }

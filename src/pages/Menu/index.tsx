@@ -3,7 +3,7 @@ import Aside from "../../components/Aside";
 import { getFoods } from "../../services/server/food";
 import { Product } from "../../services/server/food/types";
 import { Container, Content } from "./styles";
-import img from '../../assets/Ellipse5.png'
+import img from '../../assets/Rectangle9.png'
 export default function Menu(){
 
   const [foods, setFoods] = useState<Product[]>([])
@@ -26,12 +26,56 @@ export default function Menu(){
         <Content>
           <h1>SUSHI FOOD</h1>
           <div className="content-products">
-            <img src={img} alt="" />
-            <img src={img} alt="" />
-            <img src={img} alt="" />
-            <img src={img} alt="" />
-            <img src={img} alt="" />
-            <img src={img} alt="" />
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>
+
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>  
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>
+
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div>
+            <div>
+              <img src={img} alt="" />
+              <span>aaaa</span>
+            </div> 
           </div> 
           <button>more info</button> 
         </Content>
