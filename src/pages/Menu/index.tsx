@@ -77,7 +77,6 @@ export default function Menu(){
               <span>aaaa</span>
             </div> 
           </div> 
-          <button>more info</button> 
         </Content>
       </Container>
     

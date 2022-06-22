@@ -7,9 +7,6 @@ export default function Aside() {
       <Container>
         <ul>
           <li>
-            Uma logo
-          </li>
-          <li>
             <a href='/'>
               <icon.MdHome size={40}/>
             </a>

@@ -2,16 +2,28 @@ import styled from "styled-components";
 
 export const Container = styled.aside`
   min-width: 5.8em;
-  max-width: 6em;
+  width: 100%;
   height: 100%;
   flex: 1;
   background: black;
   color: white;
   border-radius: 1em;
+
+  @media (max-width: 480px) {
+    position: absolute;
+    height: 4em;
+    border-radius: 0;
+    
+    bottom: 0;
+  }
   
   ul,
   li{
     width: 100%;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
     
   }
 
@@ -23,6 +35,9 @@ export const Container = styled.aside`
     border-radius: 1em;
     height: 100%;
   
+    @media (max-width: 480px) {
+      flex-direction: row;
+    }
   }
 
   li{

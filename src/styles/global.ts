@@ -12,12 +12,15 @@ export const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     font-size: 100%;
 
+
     @media (max-width: 768px) {
       font-size: 86.5%;
     }
   }
 
-  
+  #root{
+    position: relative;
+  }
 
   a{
     text-decoration: none;

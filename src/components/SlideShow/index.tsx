@@ -24,8 +24,8 @@ export default function SlideShow( props: HomeProps){
               <p>People eat with their eyes and Sushi creates an easy way for customers to order when they can see beautiful photos of your food</p>
             </Presentation>
             <Navigation>
-              <Link to={'/about'}> About </Link>
-              <Link to={'/menu'}> Menu </Link>
+              <Link to='/about'> About </Link>
+              <Link to='/menu'> Menu </Link>
             </Navigation>
           </Container>
         ))}
