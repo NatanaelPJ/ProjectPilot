@@ -3,8 +3,22 @@ import Footer from "../../components/Footer";
 import { Container, Content, PriceTable, ProductTable } from "./styles";
 import * as icon from 'react-icons/md'
 import img from '../../assets/Ellipse5.png'
+import { useState } from "react";
+import { match } from "assert";
 
 export default function Cart(){
+  const [inp,SetInp] = useState(0)
+
+
+  function handleProductIncrement() {
+    SetInp(inp + 1)
+  }
+
+  function handleProductDecrement() {
+    SetInp(inp - 1)
+  }
+
+
   return(
     <>
       <Container>
@@ -27,6 +41,7 @@ export default function Cart(){
                       <button
                         type="button"
                         data-testid="decrement-product"
+                        onClick={handleProductDecrement}
                       >
                         <icon.MdRemoveCircleOutline size={20} />
                       </button>
@@ -34,11 +49,12 @@ export default function Cart(){
                         type="text"
                         data-testid="product-amount"
                         readOnly
-                        value={''}
+                        value={inp}
                       />
                       <button
                         type="button"
                         data-testid="increment-product"
+                        onClick={handleProductIncrement}
                       >
                         <icon.MdAddCircleOutline size={20} />
                       </button>
