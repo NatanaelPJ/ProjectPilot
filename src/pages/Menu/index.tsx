@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import Aside from "../../components/Aside";
+import Aside from "../../components/Navigation";
 import { getFoods } from "../../services/server/food";
 import { Product } from "../../services/server/food/types";
-import { Container, Content } from "./styles";
+import { Container, Content, Navigation } from "./styles";
 import img from '../../assets/Rectangle9.png'
+import Footer from "../../components/Footer";
 export default function Menu(){
 
   const [foods, setFoods] = useState<Product[]>([])
@@ -22,61 +23,69 @@ export default function Menu(){
   return (
     <>
       <Container>  
-        <Aside/>
+        <Navigation>
+          <Aside/>
+        </Navigation>
         <Content>
-          <h1>SUSHI FOOD</h1>
-          <div className="content-products">
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>
+          <div className="bla">
+            <h1>SUSHI FOOD</h1>
+            <div className="content-products">
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>   
+              </div>
 
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>  
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div>
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div>
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div>
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div>
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div>  
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div>
 
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
-            </div>
-            <div>
-              <img src={img} alt="" />
-              <span>aaaa</span>
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div>
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div>
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div>
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div>
+              <div>
+                <img src={img} alt="" />
+                <p>aaaa</p>
+              </div> 
             </div> 
-          </div> 
+            <button>
+              Load more
+            </button>
+            <Footer />
+          </div>
         </Content>
       </Container>
     

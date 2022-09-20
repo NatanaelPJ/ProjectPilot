@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.footer`
   display: flex;
 
-  padding: 0.5em;
-  background: beige;
+  @media (max-width: 680px) {
+    margin: 0 auto;
+  }
 `

@@ -10,11 +10,15 @@ export const GlobalStyle = createGlobalStyle`
   body{
     height: 100vh;
     overflow: hidden;
-    font-size: 100%;
+    font-size: 1em;
 
 
     @media (max-width: 768px) {
-      font-size: 86.5%;
+      font-size: 99.2%;
+    }
+
+    @media (max-width: 468px) {
+      font-size: 85.5%;
     }
   }
 
@@ -29,5 +33,13 @@ export const GlobalStyle = createGlobalStyle`
   ul,
   li{
     list-style: none;
+  }
+
+  h1{
+    font-size: 3em;
+  }
+
+  p{
+    font-size: 1.2em;
   }
 `

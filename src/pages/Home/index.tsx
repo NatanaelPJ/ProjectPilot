@@ -1,8 +1,9 @@
 import React,{ useState } from "react";
-import SlideShow from "../../components/SlideShow";
-
+import SlideShow from "../../components/BannerSlider";
+import { Link } from 'react-router-dom';
 import restaurant from "../../assets/restaurant.png"
 import hotel from "../../assets/hotel.png"
+import { NavigationLinks } from "./styles";
 
 export default function Home( ) {
   const [autoPlay] = useState(true)
@@ -15,6 +16,10 @@ export default function Home( ) {
 
   return(
     <>
+      <NavigationLinks>
+        <Link to='/about'> About </Link>
+        <Link to='/menu'> Menu </Link>
+      </NavigationLinks> 
       <SlideShow autoPlay={autoPlay} duration={duration} slideImages={slideImages} />
     </>
   )

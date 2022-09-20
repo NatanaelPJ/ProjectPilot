@@ -49,8 +49,7 @@ export const ProductTable = styled.table`
   }
 
   tbody{
-    max-height: 22em;
-    width: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1em;

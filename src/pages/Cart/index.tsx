@@ -1,10 +1,9 @@
-import Aside from "../../components/Aside";
+import Aside from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import { Container, Content, PriceTable, ProductTable } from "./styles";
 import * as icon from 'react-icons/md'
 import img from '../../assets/Ellipse5.png'
 import { useState } from "react";
-import { match } from "assert";
 
 export default function Cart(){
   const [inp,SetInp] = useState(0)
