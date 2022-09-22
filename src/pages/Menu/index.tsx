@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Aside from "../../components/Navigation";
 import { getFoods } from "../../services/server/food";
 import { Product } from "../../services/server/food/types";
-import { Container, Content, Navigation } from "./styles";
+import { ContentMenu} from "./styles";
 import img from '../../assets/Rectangle9.png'
 import Footer from "../../components/Footer";
+import { Theme } from "../../components/Theme";
 export default function Menu(){
 
   const [foods, setFoods] = useState<Product[]>([])
@@ -22,12 +22,8 @@ export default function Menu(){
 
   return (
     <>
-      <Container>  
-        <Navigation>
-          <Aside/>
-        </Navigation>
-        <Content>
-          <div className="bla">
+      <Theme>
+        <ContentMenu>
             <h1>SUSHI FOOD</h1>
             <div className="content-products">
               <div>
@@ -85,10 +81,8 @@ export default function Menu(){
               Load more
             </button>
             <Footer />
-          </div>
-        </Content>
-      </Container>
-    
+          </ContentMenu>
+      </Theme>
     </>
   )
 }

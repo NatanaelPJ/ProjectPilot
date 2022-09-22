@@ -7,9 +7,12 @@ export const Container = styled.nav`
   color: white;
   border-radius: 0;
   background: black;
-
   @media (min-width: 480px) {
     border-radius: 1em;
+  }
+
+  ul{
+    padding: 0.5em 0;
   }
   
   ul,

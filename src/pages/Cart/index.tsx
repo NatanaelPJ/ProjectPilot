@@ -1,9 +1,9 @@
-import Aside from "../../components/Navigation";
 import Footer from "../../components/Footer";
-import { Container, Content, PriceTable, ProductTable } from "./styles";
+import {ContentBox, PriceTable, ProductTable } from "./styles";
 import * as icon from 'react-icons/md'
 import img from '../../assets/Ellipse5.png'
 import { useState } from "react";
+import { Theme } from "../../components/Theme";
 
 export default function Cart(){
   const [inp,SetInp] = useState(0)
@@ -20,479 +20,74 @@ export default function Cart(){
 
   return(
     <>
-      <Container>
-        <Aside/>
-        <Content>
+      <Theme>
+        <ContentBox>
           <h1>Cart</h1>
-          <div className="box">
-            <ProductTable>
-              <tbody>
-                <tr>
-                  <td>
-                    <img src={img} alt={'imagem'} />
-                  </td>
+          
+          <ProductTable>
+            <tbody>
+              <tr>
+                <td>
+                  <img src={img} alt={'imagem'} />
+                </td>
+                <div className="wrapper">
                   <td className="text-box">
-                    <strong>titule</strong>
-                    <span>preco</span>
+                    <strong>Arroz de camarão com blabla bla bla</strong>
+                    <span>Unidade: xxxxxxx</span>
                   </td>
-                  <td>
-                    <div className="counterPrice">
+                  <div className="wrapperPriceTable">
+                    <td>
+                      <div className="counterPrice">
+                        <button
+                          type="button"
+                          data-testid="decrement-product"
+                          onClick={handleProductDecrement}
+                        >
+                          <icon.MdRemoveCircleOutline size={20} />
+                        </button>
+                        <input
+                          type="text"
+                          data-testid="product-amount"
+                          readOnly
+                          value={inp}
+                        />
+                        <button
+                          type="button"
+                          data-testid="increment-product"
+                          onClick={handleProductIncrement}
+                        >
+                          <icon.MdAddCircleOutline size={20} />
+                        </button>
+                      </div>
+                    </td>
+                    <td>
                       <button
                         type="button"
-                        data-testid="decrement-product"
-                        onClick={handleProductDecrement}
+                        data-testid="remove-product"
                       >
-                        <icon.MdRemoveCircleOutline size={20} />
+                        <icon.MdDelete size={20} />
                       </button>
-                      <input
-                        type="text"
-                        data-testid="product-amount"
-                        readOnly
-                        value={inp}
-                      />
-                      <button
-                        type="button"
-                        data-testid="increment-product"
-                        onClick={handleProductIncrement}
-                      >
-                        <icon.MdAddCircleOutline size={20} />
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <strong>total</strong>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="remove-product"
-                    >
-                      <icon.MdDelete size={20} />
-                    </button>
-                  </td>
-                </tr>
+                    </td>
+                  </div>
+                </div>
+              </tr>
 
-
-
-
-                <tr>
-                  <td>
-                    <img src={img} alt={'imagem'} />
-                  </td>
-                  <td className="text-box">
-                    <strong>titule</strong>
-                    <span>preco</span>
-                  </td>
-                  <td>
-                    <div className="counterPrice">
-                      <button
-                        type="button"
-                        data-testid="decrement-product"
-                      >
-                        <icon.MdRemoveCircleOutline size={20} />
-                      </button>
-                      <input
-                        type="text"
-                        data-testid="product-amount"
-                        readOnly
-                        value={''}
-                      />
-                      <button
-                        type="button"
-                        data-testid="increment-product"
-                      >
-                        <icon.MdAddCircleOutline size={20} />
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <strong>total</strong>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="remove-product"
-                    >
-                      <icon.MdDelete size={20} />
-                    </button>
-                  </td>
-                </tr>
-
-
-
-
-
-                <tr>
-                  <td>
-                    <img src={img} alt={'imagem'} />
-                  </td>
-                  <td className="text-box">
-                    <strong>titule</strong>
-                    <span>preco</span>
-                  </td>
-                  <td>
-                    <div className="counterPrice">
-                      <button
-                        type="button"
-                        data-testid="decrement-product"
-                      >
-                        <icon.MdRemoveCircleOutline size={20} />
-                      </button>
-                      <input
-                        type="text"
-                        data-testid="product-amount"
-                        readOnly
-                        value={''}
-                      />
-                      <button
-                        type="button"
-                        data-testid="increment-product"
-                      >
-                        <icon.MdAddCircleOutline size={20} />
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <strong>total</strong>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="remove-product"
-                    >
-                      <icon.MdDelete size={20} />
-                    </button>
-                  </td>
-                </tr>
-
-
-
-
-                <tr>
-                  <td>
-                    <img src={img} alt={'imagem'} />
-                  </td>
-                  <td className="text-box">
-                    <strong>titule</strong>
-                    <span>preco</span>
-                  </td>
-                  <td>
-                    <div className="counterPrice">
-                      <button
-                        type="button"
-                        data-testid="decrement-product"
-                      >
-                        <icon.MdRemoveCircleOutline size={20} />
-                      </button>
-                      <input
-                        type="text"
-                        data-testid="product-amount"
-                        readOnly
-                        value={''}
-                      />
-                      <button
-                        type="button"
-                        data-testid="increment-product"
-                      >
-                        <icon.MdAddCircleOutline size={20} />
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <strong>total</strong>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="remove-product"
-                    >
-                      <icon.MdDelete size={20} />
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src={img} alt={'imagem'} />
-                  </td>
-                  <td className="text-box">
-                    <strong>titule</strong>
-                    <span>preco</span>
-                  </td>
-                  <td>
-                    <div className="counterPrice">
-                      <button
-                        type="button"
-                        data-testid="decrement-product"
-                      >
-                        <icon.MdRemoveCircleOutline size={20} />
-                      </button>
-                      <input
-                        type="text"
-                        data-testid="product-amount"
-                        readOnly
-                        value={''}
-                      />
-                      <button
-                        type="button"
-                        data-testid="increment-product"
-                      >
-                        <icon.MdAddCircleOutline size={20} />
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <strong>total</strong>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="remove-product"
-                    >
-                      <icon.MdDelete size={20} />
-                    </button>
-                  </td>
-                </tr>
-
-
-
-
-                <tr>
-                  <td>
-                    <img src={img} alt={'imagem'} />
-                  </td>
-                  <td className="text-box">
-                    <strong>titule</strong>
-                    <span>preco</span>
-                  </td>
-                  <td>
-                    <div className="counterPrice">
-                      <button
-                        type="button"
-                        data-testid="decrement-product"
-                      >
-                        <icon.MdRemoveCircleOutline size={20} />
-                      </button>
-                      <input
-                        type="text"
-                        data-testid="product-amount"
-                        readOnly
-                        value={''}
-                      />
-                      <button
-                        type="button"
-                        data-testid="increment-product"
-                      >
-                        <icon.MdAddCircleOutline size={20} />
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <strong>total</strong>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="remove-product"
-                    >
-                      <icon.MdDelete size={20} />
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src={img} alt={'imagem'} />
-                  </td>
-                  <td className="text-box">
-                    <strong>titule</strong>
-                    <span>preco</span>
-                  </td>
-                  <td>
-                    <div className="counterPrice">
-                      <button
-                        type="button"
-                        data-testid="decrement-product"
-                      >
-                        <icon.MdRemoveCircleOutline size={20} />
-                      </button>
-                      <input
-                        type="text"
-                        data-testid="product-amount"
-                        readOnly
-                        value={''}
-                      />
-                      <button
-                        type="button"
-                        data-testid="increment-product"
-                      >
-                        <icon.MdAddCircleOutline size={20} />
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <strong>total</strong>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="remove-product"
-                    >
-                      <icon.MdDelete size={20} />
-                    </button>
-                  </td>
-                </tr>
-
-
-
-
-                <tr>
-                  <td>
-                    <img src={img} alt={'imagem'} />
-                  </td>
-                  <td className="text-box">
-                    <strong>titule</strong>
-                    <span>preco</span>
-                  </td>
-                  <td>
-                    <div className="counterPrice">
-                      <button
-                        type="button"
-                        data-testid="decrement-product"
-                      >
-                        <icon.MdRemoveCircleOutline size={20} />
-                      </button>
-                      <input
-                        type="text"
-                        data-testid="product-amount"
-                        readOnly
-                        value={''}
-                      />
-                      <button
-                        type="button"
-                        data-testid="increment-product"
-                      >
-                        <icon.MdAddCircleOutline size={20} />
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <strong>total</strong>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="remove-product"
-                    >
-                      <icon.MdDelete size={20} />
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src={img} alt={'imagem'} />
-                  </td>
-                  <td className="text-box">
-                    <strong>titule</strong>
-                    <span>preco</span>
-                  </td>
-                  <td>
-                    <div className="counterPrice">
-                      <button
-                        type="button"
-                        data-testid="decrement-product"
-                      >
-                        <icon.MdRemoveCircleOutline size={20} />
-                      </button>
-                      <input
-                        type="text"
-                        data-testid="product-amount"
-                        readOnly
-                        value={''}
-                      />
-                      <button
-                        type="button"
-                        data-testid="increment-product"
-                      >
-                        <icon.MdAddCircleOutline size={20} />
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <strong>total</strong>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="remove-product"
-                    >
-                      <icon.MdDelete size={20} />
-                    </button>
-                  </td>
-                </tr>
-
-
-
-
-                <tr>
-                  <td>
-                    <img src={img} alt={'imagem'} />
-                  </td>
-                  <td className="text-box">
-                    <strong>titule</strong>
-                    <span>preco</span>
-                  </td>
-                  <td>
-                    <div className="counterPrice">
-                      <button
-                        type="button"
-                        data-testid="decrement-product"
-                      >
-                        <icon.MdRemoveCircleOutline size={20} />
-                      </button>
-                      <input
-                        type="text"
-                        data-testid="product-amount"
-                        readOnly
-                        value={''}
-                      />
-                      <button
-                        type="button"
-                        data-testid="increment-product"
-                      >
-                        <icon.MdAddCircleOutline size={20} />
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <strong>total</strong>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="remove-product"
-                    >
-                      <icon.MdDelete size={20} />
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </ProductTable>  
-            
-            <div className="divider"></div>
-
-            <PriceTable>
-              <div className="wrapper-text">
-                <strong>Your Subtotal</strong>
-                <span>Subtotal:  $80.00</span>
-              </div>
-              <button>
-                  Confirm Order
-              </button>
-            </PriceTable>
-          </div> 
-          <Footer/>
-        </Content>
+            </tbody>
+          </ProductTable>  
+          <div className="divider"></div>
+          <PriceTable>
+            <div className="wrapper-text">
+              <strong>Your Subtotal</strong>
+              <span>Subtotal:  $80.00</span>
+            </div>
+            <button>
+                Confirm Order
+            </button>
+          </PriceTable>
+          
     
-      </Container>
+        </ContentBox>
+      </Theme>
      
     </>
   )
