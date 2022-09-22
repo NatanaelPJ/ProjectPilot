@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useRef, useState, useEffect} from "react";
-import { Product } from "../services/server/food/types";
+import { PropsFoods } from "../services/server/food/types";
 
 
 interface CartProviderProps {
@@ -12,7 +12,7 @@ interface UpdateProductAmount {
 }
 
 interface CartContextData {
-  cart: Product[];
+  cart: PropsFoods[];
   addProduct: (productId: number) => Promise<void>;
   removeProduct: (productId: number) => void;
   updateProductAmount: ({ productId, amount }: UpdateProductAmount) => void;
@@ -22,7 +22,7 @@ const CartContext = createContext<CartContextData>({} as CartContextData);
 
 
 export function CartProvider({children} : CartProviderProps): JSX.Element{
-  const [cart, setCart] = useState<Product[]>(() => {
+  const [cart, setCart] = useState<PropsFoods[]>(() => {
     const storagedCart = localStorage.getItem('@Menu: Cart')
 
 
@@ -34,7 +34,7 @@ export function CartProvider({children} : CartProviderProps): JSX.Element{
     return []
   })
 
-  const prevCartRef = useRef<Product[]>();
+  const prevCartRef = useRef<PropsFoods[]>();
   useEffect(() => {
     prevCartRef.current = cart
   })
