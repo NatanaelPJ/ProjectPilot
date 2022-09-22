@@ -9,38 +9,34 @@ export const ContentMenu = styled.article`
   .content-products{
     margin-top: 1em;
     flex: 1 0 0;
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr); */
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 3em 2em;
     overflow-y: scroll;
-
+    place-content: center;
+    
     &::-webkit-scrollbar{
       display: none;
     }
 
     div{
-      margin: 0 auto;
-      flex-shrink: 0;
-      flex-grow: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      img{
+        max-width: 12.6em;
+        max-height: 12em;
+        object-fit: cover;
+      }
       
       p{
-    
         margin-top: 0.5em;
         text-align: center;
         font-size: 1.25em;
+        overflow: hidden;
       }
 
-      img{
-        width: 100%;
-        max-width: 12.6em;
-        width: 100%;
-        max-height: 12em;
-        height:100%;
-        object-fit: cover;
-      }
     }
   }
 

@@ -15,5 +15,5 @@ export const Presentation = styled.header`
   flex-direction: column;
   color: white;
   text-align: center;
-  gap: 3.06em;
+  gap: 1.2em;
 `

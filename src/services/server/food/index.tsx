@@ -1,10 +1,10 @@
 import { api } from "../../api"
-import { Product } from "./types"
+import { PropsFoods } from "./types"
 
 
-export const getFoods = async () : Promise<Product[]> => {
-  const response = await api.get('/pizzas')
+export const getFoods = async () : Promise<PropsFoods[]> => {
+  const response = await api.get('/foods')
 
-  console.log('Response:', response.data)
+  console.log('resquest:', response.data)
   return response.data
 }

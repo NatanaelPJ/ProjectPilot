@@ -7,14 +7,11 @@ export const Container = styled.main`
 `
 
 export const NavigationLinks = styled.nav`
-
   margin: 0;
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
- 
-  
 
   z-index: 1000;
   max-width: 30.87em;
@@ -26,7 +23,7 @@ export const NavigationLinks = styled.nav`
   a{
     width: 100%;
     background: white;
-    padding: 1em;
+    padding: 0.8em 0;
     text-align: center;
     text-transform: uppercase;
     font-size: 1.2em;

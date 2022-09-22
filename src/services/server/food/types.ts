@@ -1,9 +1,8 @@
-export interface Product{
+export interface PropsFoods{
   id: number;
-  name: string;
-  veg: boolean;
-  price: number;
-  description: string;
-  quantity: number;
-  img: string;
+  title: string;
+  categoria: string;
+  preco: number;
+  imagem: string;
+  descricao: string;
 }

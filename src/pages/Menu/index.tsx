@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { getFoods } from "../../services/server/food";
-import { Product } from "../../services/server/food/types";
+import { PropsFoods } from "../../services/server/food/types";
 import { ContentMenu} from "./styles";
 import img from '../../assets/Rectangle9.png'
 import Footer from "../../components/Footer";
 import { Theme } from "../../components/Theme";
 export default function Menu(){
 
-  const [foods, setFoods] = useState<Product[]>([])
+  const [foods, setFoods] = useState<PropsFoods[]>([])
 
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function Menu(){
       let result = await getFoods()
 
       setFoods(result)
-      console.log('Responta',result);
+      console.log('Res',result);
     }
     loadFoods()
   },[])
@@ -31,51 +31,12 @@ export default function Menu(){
                 <p>aaaa</p>   
               </div>
 
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div>
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div>
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div>
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div>
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div>  
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div>
-
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div>
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div>
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div>
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div>
-              <div>
-                <img src={img} alt="" />
-                <p>aaaa</p>
-              </div> 
+              {foods.map(item => (
+                <div key={item.id}>
+                  <img src={img} alt={item.title} />
+                  <p>{item.title}</p>
+                </div>
+              ))}
             </div> 
             <button>
               Load more
