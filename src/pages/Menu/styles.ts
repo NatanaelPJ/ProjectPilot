@@ -13,8 +13,9 @@ export const ContentMenu = styled.article`
     grid-template-columns: repeat(3, 1fr); */
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 3em 2em;
+    gap: 4em;
     overflow-y: scroll;
 
     &::-webkit-scrollbar{
@@ -22,29 +23,36 @@ export const ContentMenu = styled.article`
     }
 
     div{
-      margin: 0 auto;
-      flex-shrink: 0;
-      flex-grow: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 11em;
+      width: 100%;
+      height: 20em;
+      gap: 0.5em;
       
-      p{
-    
-        margin-top: 0.5em;
-        text-align: center;
-        font-size: 1.25em;
+      img{   
+        width: 100%;
+        height: 11em;
+        object-fit: cover;
       }
 
-      img{
-        width: 100%;
-        max-width: 12.6em;
-        width: 100%;
-        max-height: 12em;
-        height:100%;
-        object-fit: cover;
+      p{
+        text-align: center;
+        font-size: 1.25em;
+        flex: 1;
+      }
+
+
+      button{
+        background: black;
+        margin: 0;
+        
       }
     }
   }
 
-  button{
+  button {
     margin: 2em auto;
     max-width: 11em;
     width: 100%;

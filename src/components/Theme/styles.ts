@@ -4,14 +4,15 @@ export const Container = styled.main`
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column-reverse;
 
-  @media (max-width: 480px) {
-    flex-direction: column-reverse;
+  @media (min-width: 768px) {
+    flex-direction: initial;
   }
 `
 
 export const Navigation = styled.aside`
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     padding: 1em 0.5em;
     flex:0 0 6em; 
     height: 100%;

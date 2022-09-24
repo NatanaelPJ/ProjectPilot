@@ -8,8 +8,6 @@ export const ContentBox = styled.article`
   padding: 1em 1em;
   
 
-
-
   .divider{
     margin: 1em 0;
     height: 1px;
@@ -19,10 +17,13 @@ export const ContentBox = styled.article`
 `
 
 export const ProductTable = styled.table`
+  margin-top: 1em;
   flex-grow: 1;
   flex-basis: 0;
   display: flex;
+  flex-direction: column;
   overflow-y: auto;
+  overflow-x: hidden;
   background: #F1D5BB;
   padding: 1em 1em;
 
@@ -30,56 +31,72 @@ export const ProductTable = styled.table`
     display: none;
   }
 
-  tbody{
-    flex: 1 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  thead{
+   
+    position: static;
+
+    tr{
+      width:100%;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+
+      @media (max-width: 468px) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
   }
 
-  tr{
+
+  tbody{
+    margin-top: 1.2em;
     width: 100%;
-    display: flex;
-    align-items: center;
     gap: 1em;
-    padding: 1em 0;
 
-    
-    @media (min-width: 480px) {
-      justify-content: space-between; 
-    }
-    
-    td img{
-      width: 5.62em;
-      height: 5.62em;
-    }
-
-    .wrapper{
+    tr{
+      width:100%;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
       
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      gap: 0 2em;
-      
-      
-
-      @media (min-width: 480px) {
-     
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr 1fr 1fr;
       }
 
-      .text-box{
-        display: flex;
-        flex-direction: column;
-        line-height: 150%;
-      }
 
-      .wrapperPriceTable{
+      .productDescription{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1em;
+
+        img{
+          margin: auto;
+          width: 5.62em;
+          height: 5.62em;
+        }
+
+        strong{
+          margin: auto 0;
+          margin-right: auto;
+        }
+
+        @media (max-width: 560px) {
+          grid-template-columns: 1fr;
+         
+
+          strong{
+            margin-right: unset;
+            text-align: center;
+          }
+        }
+      }
+  
+      .productAmount{
+        flex: 1;
         display: flex;
         align-items: center;
-       
-
-
-        td .counterPrice{
+        justify-content: center;
+        gap: 0 2em;
+        
+        .counterPrice{
           display: flex;
           gap: 0.5em;
 
@@ -87,16 +104,24 @@ export const ProductTable = styled.table`
             background: transparent;
             border: none;
           }
-
+  
           input{
-            max-width: 3em;
-            min-width: 2.5em;
+            max-width: 3.5em;
+            flex-shrink: 0;
             width: 100%;
+            text-align: center;
           }
         }
       }
+
+      .subTotal{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
+
 `
 
 export const PriceTable = styled.div`
