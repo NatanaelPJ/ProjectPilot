@@ -47,7 +47,6 @@ export const ContentMenu = styled.article`
       button{
         background: black;
         margin: 0;
-        
       }
     }
   }

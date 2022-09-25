@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 100vh;
     overflow: hidden;
     font-size: 1em;
-
+    -webkit-font-smoothing: antialiased;
 
     @media (max-width: 768px) {
       font-size: 99.2%;
@@ -41,5 +41,9 @@ export const GlobalStyle = createGlobalStyle`
 
   p{
     font-size: 1.2em;
+  }
+
+  button, a{
+    cursor: pointer;
   }
 `

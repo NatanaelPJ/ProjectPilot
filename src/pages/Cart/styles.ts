@@ -22,7 +22,6 @@ export const ProductTable = styled.table`
   flex-basis: 0;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
   overflow-x: hidden;
   background: #F1D5BB;
   padding: 1em 1em;
@@ -32,7 +31,6 @@ export const ProductTable = styled.table`
   }
 
   thead{
-   
     position: static;
 
     tr{
@@ -48,9 +46,12 @@ export const ProductTable = styled.table`
 
 
   tbody{
+    overflow-y: auto;
     margin-top: 1.2em;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    gap: 1em;
+    gap: 3em;
 
     tr{
       width:100%;

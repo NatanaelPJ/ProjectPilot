@@ -1,23 +1,20 @@
-import Footer from "../../components/Footer";
 import {ContentBox, PriceTable, ProductTable } from "./styles";
 import * as icon from 'react-icons/md'
 import img from '../../assets/Ellipse5.png'
 import { useState } from "react";
 import { Theme } from "../../components/Theme";
+import { useCart } from "../../contexts/useCart";
+import { formatPrice } from "../../util/format";
 
 export default function Cart(){
-  const [inp,SetInp] = useState(0)
 
-
-  function handleProductIncrement() {
-    SetInp(inp + 1)
-  }
-
-  function handleProductDecrement() {
-    SetInp(inp - 1)
-  }
-
-
+  const { cart } = useCart()
+  const cartFormatted = cart.map(product => ({
+    ...product,
+    priceFormatted: formatPrice(product.price)
+  }))
+  
+  
   return(
     <>
       <Theme>
@@ -25,60 +22,58 @@ export default function Cart(){
           <h1>Cart</h1>
           
           <ProductTable>
-            <tbody>
+            <thead>
               <tr>
-                <td>
-                  <img src={img} alt={'imagem'} />
-                </td>
-                <div className="wrapper">
-                  <td className="text-box">
-                    <strong>Arroz de camarão com blabla bla bla</strong>
-                    <span>Unidade: xxxxxxx</span>
+                {/* <th aria-label="product image" /> */}
+                <th>PRODUTO</th>
+                <th>QTD</th>
+                <th>SUBTOTAL</th>
+                {/* <th aria-label="delete icon" /> */}
+              </tr>
+            </thead>
+            <tbody>
+              {cartFormatted.map(product => (
+                <tr key={product.id}>
+                  <td className="productDescription">
+                    <img src={img} alt={'imagem'} />
+                    <strong>{product.title}</strong>
                   </td>
-                  <div className="wrapperPriceTable">
-                    <td>
-                      <div className="counterPrice">
-                        <button
-                          type="button"
-                          data-testid="decrement-product"
-                          onClick={handleProductDecrement}
-                        >
-                          <icon.MdRemoveCircleOutline size={20} />
-                        </button>
-                        <input
-                          type="text"
-                          data-testid="product-amount"
-                          readOnly
-                          value={inp}
-                        />
-                        <button
-                          type="button"
-                          data-testid="increment-product"
-                          onClick={handleProductIncrement}
-                        >
-                          <icon.MdAddCircleOutline size={20} />
-                        </button>
-                      </div>
-                    </td>
-                    <td>
+                  <td className="productAmount">
+                    <div className="counterPrice">
                       <button
                         type="button"
-                        data-testid="remove-product"
+                        data-testid="decrement-product"
+                   
                       >
-                        <icon.MdDelete size={20} />
+                        <icon.MdRemoveCircleOutline size={20} />
                       </button>
-                    </td>
-                  </div>
-                </div>
-              </tr>
-
+                      <input
+                        type="text"
+                        data-testid="product-amount"
+                        readOnly
+                        
+                      />
+                      <button
+                        type="button"
+                        data-testid="increment-product"
+                       
+                      >
+                        <icon.MdAddCircleOutline size={20} />
+                      </button>
+                    </div>             
+                  </td>
+                  <td className="subTotal">
+                    <strong> { product.priceFormatted} </strong>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </ProductTable>  
           <div className="divider"></div>
           <PriceTable>
             <div className="wrapper-text">
-              <strong>Your Subtotal</strong>
-              <span>Subtotal:  $80.00</span>
+              <strong>Your total</strong>
+              <span>total:  $80.00</span>
             </div>
             <button>
                 Confirm Order
@@ -88,7 +83,6 @@ export default function Cart(){
     
         </ContentBox>
       </Theme>
-     
     </>
   )
 }
