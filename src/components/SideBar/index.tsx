@@ -1,4 +1,5 @@
 import * as icon from 'react-icons/md'
+import { Link } from 'react-router-dom'
 import { Container } from './style'
 
 export default function Nav() {
@@ -7,29 +8,29 @@ export default function Nav() {
       <Container>
         <ul>
           <li>
-            <a href='/'>
+            <Link to='/'>
               <icon.MdHome size={32}/>
-            </a>
+            </Link>
           </li>
           <li>
-            <a> 
+            <Link to='/menu'> 
               <icon.MdLocalDining size={32}/>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='/cart'> 
+            <Link to='/cart'> 
               <icon.MdLocalGroceryStore size={32}/>
-            </a>
+            </Link>
           </li>
           <li>
-            <a> 
+            <Link to='/'> 
               <icon.MdLocationPin size={32}/>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='/'> 
+            <Link to='/'> 
               <icon.MdExitToApp size={32} />
-            </a>
+            </Link>
           </li>
         </ul>
       </Container>
