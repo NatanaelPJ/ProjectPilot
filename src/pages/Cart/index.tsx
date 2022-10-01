@@ -1,20 +1,42 @@
 import {ContentBox, PriceTable, ProductTable } from "./styles";
 import * as icon from 'react-icons/md'
 import img from '../../assets/Ellipse5.png'
-import { useState } from "react";
 import { Theme } from "../../components/Theme";
 import { useCart } from "../../contexts/useCart";
 import { formatPrice } from "../../util/format";
+import { PropsFoods } from "../../services/server/food/types";
 
 export default function Cart(){
 
-  const { cart } = useCart()
+  const { cart, removeProduct, updateAmountProduct } = useCart()
   const cartFormatted = cart.map(product => ({
     ...product,
-    priceFormatted: formatPrice(product.price)
+    priceFormatted: formatPrice(product.price),
+    subTotal: product.price * product.amount
   }))
+
+  const total = formatPrice(
+    cart.reduce((acc, cur) => {
+    return acc + cur.price * cur.amount
+  }, 0)
+  )
+
+  console.log('tttt', total);
   
   
+  function handleProductIncrement(product: PropsFoods) {
+    updateAmountProduct({productId: product.id, amount: product.amount + 1})
+  }
+
+  function handleProductDecrement(product: PropsFoods) {
+    updateAmountProduct({productId: product.id, amount: product.amount - 1})
+  }
+
+  function handleRemoveProduct(productId: number) {
+    removeProduct(productId)
+  }
+
+
   return(
     <>
       <Theme>
@@ -43,7 +65,7 @@ export default function Cart(){
                       <button
                         type="button"
                         data-testid="decrement-product"
-                   
+                        onClick={() => handleProductDecrement(product)}
                       >
                         <icon.MdRemoveCircleOutline size={20} />
                       </button>
@@ -51,19 +73,27 @@ export default function Cart(){
                         type="text"
                         data-testid="product-amount"
                         readOnly
+                        value={product.amount}
                         
                       />
                       <button
                         type="button"
                         data-testid="increment-product"
-                       
+                        onClick={() => handleProductIncrement(product)}
                       >
                         <icon.MdAddCircleOutline size={20} />
                       </button>
-                    </div>             
+                    </div>   
+                    <button
+                      type="button"
+                      data-testid="remove-product"
+                    onClick={() => handleRemoveProduct(product.id)}
+                    >
+                      <icon.MdDelete size={20} />
+                    </button>          
                   </td>
                   <td className="subTotal">
-                    <strong> { product.priceFormatted} </strong>
+                    <strong> {formatPrice(product.subTotal)} </strong>
                   </td>
                 </tr>
               ))}
@@ -73,7 +103,7 @@ export default function Cart(){
           <PriceTable>
             <div className="wrapper-text">
               <strong>Your total</strong>
-              <span>total:  $80.00</span>
+              <span>{total}</span>
             </div>
             <button>
                 Confirm Order

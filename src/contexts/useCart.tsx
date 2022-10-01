@@ -1,6 +1,5 @@
 import { createContext, ReactNode, useContext, useRef, useState, useEffect} from "react";
 import { toast } from "react-toastify";
-import { api } from "../services/api";
 import { getFoodId } from "../services/server/food";
 import { PropsFoods } from "../services/server/food/types";
 
@@ -9,10 +8,16 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
+interface UpdateProductAmountProps{
+  productId: number;
+  amount: number;
+}
+
 interface CartContextData {
   cart: PropsFoods[];
   addProduct: (productId: number) => Promise<void>;
-  // removeProduct: (productId: number) => void;
+  removeProduct: (productId: number) => void;
+  updateAmountProduct: ({ productId, amount } : UpdateProductAmountProps) => void;
 }
 
 const CartContext = createContext<CartContextData>( {} as CartContextData);
@@ -50,23 +55,64 @@ export function CartProvider({ children } : CartProviderProps) : JSX.Element{
       const productExists = updatedCart.find( product => product.id === productId)
       
       if(productExists){
-        toast.warning('Product already exists!');
+        alert('Product already exists!');
       } else{
         const product = await getFoodId(productId);
-        toast.success('Adicionado com successo!');
-        updatedCart.push(product)
+        alert('Adicionado com successo!');
+        updatedCart.push({
+          ...product,
+          amount: 1
+        }) 
       }
-     
+
       setCart(updatedCart);
-      
+
     } catch {
-        toast.error('Erro na adição do produto');
+        alert('Erro na adição do produto');
     }
+  }
+
+  const removeProduct = async (productId: number) => { 
+    try {
+      const updatedCart = [...cart];
+      const productIndex = updatedCart.findIndex( product => product.id === productId)
+
+      if(productIndex >= 0 ){
+        updatedCart.splice(productIndex, 1);
+        setCart(updatedCart);
+      } else{
+        throw Error();
+      }
+    } catch {
+        toast.error('Erro na remoção do produto');
+    }
+  }
+  
+  const updateAmountProduct = async( {productId, amount } : UpdateProductAmountProps) => {
+   try{
+    if(amount <= 0) {
+      return
+    }
+
+    const updatedCart = [...cart];
+    const productExists = updatedCart.find(product => product.id === productId);
+
+    if(productExists){
+      productExists.amount = amount
+
+      console.log('pamont',productExists.amount)
+      setCart(updatedCart)
+    } else {
+      throw Error();
+    }
+   } catch {
+      alert('Erro na alteração de quantidade do produto')
+   }
   }
  
 
   return (
-    <CartContext.Provider value={{cart, addProduct}}>
+    <CartContext.Provider value={{cart, addProduct, removeProduct, updateAmountProduct}}>
       { children }
     </CartContext.Provider>
   )

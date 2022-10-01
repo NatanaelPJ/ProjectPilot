@@ -5,4 +5,7 @@ export interface PropsFoods{
   price: number;
   image: string;
   description: string;
+  amount: number;
 }
+
+

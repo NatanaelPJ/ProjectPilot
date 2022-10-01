@@ -6,22 +6,21 @@ import img from '../../assets/Rectangle9.png'
 import Footer from "../../components/Footer";
 import { Theme } from "../../components/Theme";
 import { useCart } from "../../contexts/useCart";
+import { formatPrice } from "../../util/format";
 
 
 export default function Menu(){
 
   const [foods, setFoods] = useState<PropsFoods[]>([])
-  const { addProduct, cart } = useCart()
+  const { addProduct } = useCart()
 
   useEffect(() => {
     async function loadFoods(){
-      let result = await getFoods()
-
-      setFoods(result)
+      const response = await getFoods()
+      setFoods(response)
     }
     loadFoods()
   },[])
-
 
   function handleAddProduct(id: number) {
     addProduct(id)
@@ -37,11 +36,11 @@ export default function Menu(){
                 <div key={product.id}>
                   <img src={img} alt={product.title} />
                   <p>{product.title}</p>
+                  <span>{formatPrice(product.price)}</span>
                   <button 
                     type="button"
                     onClick={() => {
                       handleAddProduct(product.id)
-                      console.log("Product added successfully!");
                     }}
                   >
                     add to cart
