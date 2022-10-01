@@ -18,7 +18,7 @@ export default function SlideShow( props: HomeProps){
     <>
       <Slide autoplay={props.autoPlay} duration={props.duration} easing="ease">
         {props.slideImages.map((item)=> (  
-          <Container style={{'backgroundImage': `url(${item})`}}>
+          <Container key={item} style={{'backgroundImage': `url(${item})`}}>
             <Presentation>
               <h1>Welcome to Sushi Restaurant</h1>
               <p>People eat with their eyes and Sushi creates an easy way for customers to order when they can see beautiful photos of your food</p>

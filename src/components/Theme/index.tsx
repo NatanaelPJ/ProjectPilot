@@ -1,4 +1,4 @@
-import { Children, ReactNode } from "react";
+import { ReactNode } from "react";
 import Nav from "../SideBar";
 
 import { Container, Content, Navigation } from "./styles";

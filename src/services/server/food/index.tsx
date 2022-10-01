@@ -7,10 +7,7 @@ export const getFoods = async () : Promise<PropsFoods[]> => {
   return response.data
 }
 
-
-
 export const getFoodId = async (id: number) : Promise<PropsFoods> => {
   const response = await api.get(`/foods/${id}`)
-  console.log('idp', response.data)
   return response.data
 }
