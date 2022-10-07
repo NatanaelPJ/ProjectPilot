@@ -40,9 +40,12 @@ export const ContentMenu = styled.article`
       p{
         text-align: center;
         font-size: 1.25em;
-        flex: 1;
+        
       }
 
+      span{
+        flex: 1;
+      }
 
       button{
         background: black;

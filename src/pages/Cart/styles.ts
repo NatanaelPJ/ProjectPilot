@@ -59,7 +59,7 @@ export const ProductTable = styled.table`
       grid-template-columns: 2fr 1fr 1fr;
       
       @media (max-width: 480px) {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
       }
 
 
@@ -94,16 +94,23 @@ export const ProductTable = styled.table`
         flex: 1;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 0 2em;
+        justify-content: space-around;
         
+
+
         .counterPrice{
           display: flex;
           gap: 0.5em;
 
           button{
-            background: transparent;
             border: none;
+            background: none;
+            outline: none;
+            .a{
+              border: none;
+              background: none;
+
+            }
           }
   
           input{

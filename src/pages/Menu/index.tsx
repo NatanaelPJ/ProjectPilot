@@ -9,9 +9,18 @@ import { useCart } from "../../contexts/useCart";
 import { formatPrice } from "../../util/format";
 
 
-export default function Menu(){
 
+export default function Menu(){
   const [foods, setFoods] = useState<PropsFoods[]>([])
+
+  const categorybuttons = foods.map((product) => product.category).reduce((initialValue : String[], currentValue) => {
+    return initialValue.includes(currentValue)? initialValue : [...initialValue, currentValue ]
+  },[])
+
+
+  console.log('categorybuttons',categorybuttons);
+  
+
   const { addProduct } = useCart()
 
   useEffect(() => {
@@ -20,9 +29,11 @@ export default function Menu(){
       setFoods(response)
     }
     loadFoods()
+    
   },[])
 
-  function handleAddProduct(id: number) {
+  
+  const handleAddProduct = (id: number) => {
     addProduct(id)
   }
 
@@ -31,6 +42,15 @@ export default function Menu(){
       <Theme>
         <ContentMenu>
             <h1>SUSHI FOOD</h1>
+            <div>
+              <ul>
+                {categorybuttons.map((value) => (
+                  <button>
+                    {value}
+                  </button>
+                )) }
+              </ul>
+            </div>
             <div className="content-products">
               {foods.map(product => (
                 <div key={product.id}>
