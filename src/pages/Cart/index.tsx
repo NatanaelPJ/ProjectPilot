@@ -24,15 +24,15 @@ export default function Cart(){
   console.log('tttt', total);
   
   
-  function handleProductIncrement(product: PropsFoods) {
+  const handleProductIncrement = (product: PropsFoods) => {
     updateAmountProduct({productId: product.id, amount: product.amount + 1})
   }
 
-  function handleProductDecrement(product: PropsFoods) {
+  const handleProductDecrement = (product: PropsFoods) => {
     updateAmountProduct({productId: product.id, amount: product.amount - 1})
   }
 
-  function handleRemoveProduct(productId: number) {
+  const handleRemoveProduct = (productId: number) => {
     removeProduct(productId)
   }
 

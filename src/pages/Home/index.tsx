@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import { useState } from "react";
 import SlideShow from "../../components/BannerSlider";
 import { Link } from 'react-router-dom';
 import restaurant from "../../assets/restaurant.png"

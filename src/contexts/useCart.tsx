@@ -34,6 +34,7 @@ export function CartProvider({ children } : CartProviderProps) : JSX.Element{
 
     return []
   })
+ 
 
   const prevCartRef = useRef<PropsFoods[]>();
   useEffect(() => {
@@ -47,7 +48,6 @@ export function CartProvider({ children } : CartProviderProps) : JSX.Element{
       localStorage.setItem('@Menu:cart', JSON.stringify(cart));
     }
   }, [cart,cartPreviousValue])
-
 
   const addProduct = async (productId : number) => { 
     try {
