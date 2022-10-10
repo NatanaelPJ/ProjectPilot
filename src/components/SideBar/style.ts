@@ -11,10 +11,6 @@ export const Container = styled.nav`
     border-radius: 1em;
   }
 
-  ul{
-    padding: 0.5em 0;
-  }
-  
   ul,
   li{
     width: 100%;
@@ -26,22 +22,58 @@ export const Container = styled.nav`
   }
 
   ul{
+    padding: 0.5em 0;
     display: flex;
     flex-direction: row;
     height: 100%;
   
   
+    li{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+     
+      a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        color: white;
+
+        .iconSidebar{
+          width: 2em;
+          height: 2em;
+        }
+
+        p{
+          display: none;
+        }
+
+        @media (min-width: 668px) {
+          &:hover{
+            p{
+              position: absolute;
+              top: 1.8em;
+              display: initial;
+            }
+          } 
+        }
+      }
+
+     
+    }
+
+
+
     @media (min-width: 768px) {
       flex-direction: column;
       justify-content: space-around;
       padding: 1em 0;
       border-radius: 1em;
     }
+
   }
 
-  li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  
 `

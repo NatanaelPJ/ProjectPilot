@@ -9,27 +9,32 @@ export default function Nav() {
         <ul>
           <li>
             <Link to='/'>
-              <icon.MdHome size={32}/>
+              <icon.MdHome className='iconSidebar' size={24}/>
+              <p> Home </p>
             </Link>
           </li>
           <li>
             <Link to='/menu'> 
-              <icon.MdLocalDining size={32}/>
+              <icon.MdLocalDining className='iconSidebar' size={24}/>
+              <p> Menu </p>
             </Link>
           </li>
           <li>
             <Link to='/cart'> 
-              <icon.MdLocalGroceryStore size={32}/>
+              <icon.MdLocalGroceryStore className='iconSidebar' size={24}/>
+              <p> Cart </p>
             </Link>
           </li>
           <li>
             <Link to='/'> 
-              <icon.MdLocationPin size={32}/>
+              <icon.MdLocationPin className='iconSidebar' size={24}/>
+              <p> Location </p>
             </Link>
           </li>
           <li>
             <Link to='/'> 
-              <icon.MdExitToApp size={32} />
+              <icon.MdExitToApp className='iconSidebar' size={24} />
+              <p> Exit </p>
             </Link>
           </li>
         </ul>
