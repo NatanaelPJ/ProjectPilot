@@ -14,7 +14,7 @@
       "title": "Sanduiche Carne",
       "category": "Sanduiche",
       "price": 15.59,
-      "image": "../assets/image/sanduiche/sanduiche-chapa.jpg",
+      "image": "../assets/image/Sanduiche/Sanduiche-chapa.jpg",
       "description":
         "100 g do hamburger 100% carne Angus, 2 fatias de muçarela derretida, alface, tomate fresquinho, picles, cebola e maionese à sua escolha."
     },
@@ -23,7 +23,7 @@
       "title": "Sanduiche carne em dobro",
       "category": "Sanduiche",
       "price": 25.00,
-      "image": "../assets/image/sanduiche/sanduiche-duplo-batata.jpg",
+      "image": "../assets/image/Sanduiche/Sanduiche-duplo-batata.jpg",
       "description":
         "2 hambúrguer Angus 100% carne, picles, alface-americana,2 fatias bacon, cebola picada, 2 fatias de muçarela, maionese e porção de batata-frita"
     },
@@ -32,7 +32,7 @@
       "title": "Sanduiche peito de frango",
       "category": "Sanduiche",
       "price": 11.23,
-      "image": "../assets/image/sanduiche/sanduiche-peito-frango.jpg",
+      "image": "../assets/image/Sanduiche/Sanduiche-peito-frango.jpg",
       "description":
         "50g de peito de frango, alface, tomate, cebola, 1 fatias de muçarela e maionese americana"
     },
@@ -41,176 +41,149 @@
       "title": "Sanduiche tamanho da sua fome",
       "category": "Sanduiche",
       "price": 29.00,
-      "image": "../assets/image/sanduiche/sanduiche-cebola.jpg",
+      "image": "../assets/image/Sanduiche/Sanduiche-cebola.jpg",
       "description":
         "150 g do hamburger 100% carne Angus, 2 fatias de muçarela derretida, alface, tomate fresquinho, picles, cebola e maionese à sua escolha."
     },
     {
       "id": 6,
       "title": "Salmon grelhado",
-      "category": "peixes",
+      "category": "Peixes",
       "price": 62.88,
-      "image": "../assets/image/peixe/salmon-salada.jpg",
-      "description": "100g de Salmon, molho de laranja, salada amarericana"
+      "image": "../assets/image/peixe/salmon-Salada.jpg",
+      "description": "100g de Salmon, molho de laranja, Salada amarericana"
     },
     {
       "id": 7,
       "title": "Costela suína",
-      "category": "suino",
+      "category": "Suino",
       "price": 35.15,
-      "image": "../assets/image/suino/carne-costela-molho-madeira.jpg",
+      "image": "../assets/image/Suino/carne-costela-molho-madeira.jpg",
       "description":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sunt! Saepe dignissimos odio doloribus harum dolores eaque tempora dolorem! Nemo nam reiciendis cumque modi molestiae nisi corporis explicabo inventore assumenda."
     },
     {
       "id": 8,
       "title": "Salada cesar",
-      "category": "salada",
+      "category": "Salada",
       "price": 25.00,
-      "image": "../assets/image/salada/salada-cesar.jpg",
+      "image": "../assets/image/Salada/Salada-cesar.jpg",
       "description":
-        "preparada com alface romana e molho Caesar. Os temperos usados para compor este molho são azeite de oliva, suco de limão, anchovas, queijo parmesão, molho inglês, sal, açúcar e pimenta preta. A salada geralmente é servida com croutons e queijo parmesão fresco ralado."
+        "preparada com alface romana e molho Caesar. Os temperos usados para compor este molho são azeite de oliva, suco de limão, anchovas, queijo parmesão, molho inglês, sal, açúcar e pimenta preta. A Salada geralmente é servida com croutons e queijo parmesão fresco ralado."
     },
     {
       "id": 9,
       "title": "Salada Frango e Queijo",
-      "category": "salada",
+      "category": "Salada",
       "price": 25.00,
-      "image": "../assets/image/salada/salada-frango-melancia.jpg",
+      "image": "../assets/image/Salada/Salada-frango-melancia.jpg",
       "description":
         "Cubos de peito de frango, tomates cereja, alface, pepino e molho a escolha"
     },
     {
       "id": 10,
       "title": "Salada italiana",
-      "category": "salada",
+      "category": "Salada",
       "price": 25.00,
-      "image": "../assets/image/salada/salada-frango-melancia.jpg",
+      "image": "../assets/image/Salada/Salada-frango-melancia.jpg",
       "description":
         "tomatinho cereja, alho, pão brioche, manjericão, alface americana e mini pão baguete"
     },
     {
       "id": 11,
       "title": "Salada Verão",
-      "category": "salada",
+      "category": "Salada",
       "price": 25.00,
-      "image": "../assets/image/salada/salada-frango-manga-tomate-laranja.jpg",
+      "image": "../assets/image/Salada/Salada-frango-manga-tomate-laranja.jpg",
       "description":
         "Iscas de frango, tomate cereja, manga, manjericão e molho de laranja ou de preferência"
     },
     {
       "id": 12,
       "title": "Salada Frango com brócolis",
-      "category": "salada",
+      "category": "Salada",
       "price": 25.00,
-      "image": "../assets/image/salada/salada-frango-brocolis.jpg",
+      "image": "../assets/image/Salada/Salada-frango-brocolis.jpg",
       "description":
         "Iscas de frango, tomate cereja, brocolis, cenoura cozida, manjericão e molho da preferência"
     },
     {
       "id": 13,
       "title": "Sorvete em dobro",
-      "category": "promocao",
+      "category": "Promocao",
       "price": 25.00,
-      "image": "../assets/image/promocao/promocao-2-sorvete.jpg",
+      "image": "../assets/image/Promocao/Promocao-2-sorvete.jpg",
       "description":
         "2 unidades de Sorvete de baunilha com pedaços de chocolate ou chocolate crocante"
     },
     {
       "id": 14,
       "title": "Sanduiche em dobro",
-      "category": "promocao",
+      "category": "Promocao",
       "price": 25.00,
-      "image": "../assets/image/promocao/promocao-2-sanduiche.jpg",
+      "image": "../assets/image/Promocao/Promocao-2-Sanduiche.jpg",
       "description":
-        "2 sanduiche de 50g hamburger 100% carne Angus, 2 fatias de muçarela derretida, alface, tomate fresquinho, picles e maionese americana"
+        "2 Sanduiche de 50g hamburger 100% carne Angus, 2 fatias de muçarela derretida, alface, tomate fresquinho, picles e maionese americana"
     },
     {
       "id": 15,
       "title": "Amigos da Sexta",
-      "category": "promocao",
+      "category": "Promocao",
       "price": 25.00,
       "image":
-        "../assets/image/promocao/frita-assa-de-frango-batata-calabresa-carne.jpg",
+        "../assets/image/Promocao/frita-assa-de-frango-batata-calabresa-carne.jpg",
       "description":
         "Coxas de frango frito, batata-frita ou assada, fatias de cenoura, calabresa na chapa, isca de carne e molho de preferência"
     },
     {
       "id": 16,
       "title": "Amigos da Sexta Primium",
-      "category": "promocao",
+      "category": "Promocao",
       "price": 25.00,
       "image":
-        "../assets/image/promocao/promocao-anais-cebola-camarao-asa-frango.jpg",
+        "../assets/image/Promocao/Promocao-anais-cebola-camarao-asa-frango.jpg",
       "description":
         "Coxas de frango frito, batata-frita ou assada, fatias de cenoura, calabresa na chapa, camarão frito, aneis da cebola e molho de preferência"
     },
     {
       "id": 17,
       "title": "Asas de Frango frito",
-      "category": "frango",
+      "category": "Frango",
       "price": 25.00,
       "image": "../assets/image/frango/frango-asa-frito.jpg",
-      "description": "Asas de frango frito ao molho de preferência e salada"
+      "description": "Asas de frango frito ao molho de preferência e Salada"
     },
     {
       "id": 18,
       "title": "Peito de Frango Gralhado",
-      "category": "frango",
+      "category": "Frango",
       "price": 25.00,
       "image": "../assets/image/frango/frango-batata-assada.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
-      "id": 19,
-      "title": "Peito de Frango Gralhado com brocolis",
-      "category": "frango",
-      "price": 25.00,
-      "image": "../assets/image/frango/frango-brocolis.jpg",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
-    },
-    {
-      "id": 20,
-      "title": "Cubos de peito de frango Gralhado com arroz e brocolis",
-      "category": "frango",
-      "price": 25.00,
-      "image": "../assets/image/frango/frango-brocolis.jpg",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
-    },
-    {
       "id": 21,
-      "title": "Frango empanado com salada",
-      "category": "frango",
+      "title": "Frango empanado com Salada",
+      "category": "Frango",
       "price": 25.00,
-      "image": "../assets/image/frango/frango-empanado-salada.jpg",
+      "image": "../assets/image/frango/frango-empanado-Salada.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 22,
       "title": "Coxa de Frango frita",
-      "category": "frango",
+      "category": "Frango",
       "price": 25.00,
       "image": "../assets/image/frango/frango-frito-coxa-batata-frita.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
-      "id": 23,
-      "title": "Peito de Frango grelhado com salada cozida",
-      "category": "frango",
-      "price": 25.00,
-      "image": "../assets/image/frango/frango-grelhado-peito-salada-cozida.jpg",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
-    },
-    {
       "id": 24,
       "title": "Peito de Frango com arroz e brocólis",
-      "category": "frango",
+      "category": "Frango",
       "price": 25.00,
       "image": "../assets/image/frango/frango-peito-arroz-brocolis.jpg",
       "description":
@@ -219,7 +192,7 @@
     {
       "id": 25,
       "title": "Peito de Frango com arroz e brocólis",
-      "category": "frango",
+      "category": "Frango",
       "price": 25.00,
       "image": "../assets/image/frango/frango-peito-arroz-brocolis.jpg",
       "description":
@@ -228,25 +201,25 @@
     {
       "id": 26,
       "title": "Peito de Frango com arroz e brocólis",
-      "category": "frango",
+      "category": "Frango",
       "price": 25.00,
-      "image": "../assets/image/carne/carne-arroz-salada-batata.jpg",
+      "image": "../assets/image/carne/carne-arroz-Salada-batata.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 27,
-      "title": "Bife de carne com arroz e salada",
-      "category": "carne",
+      "title": "Bife de carne com arroz e Salada",
+      "category": "Carne",
       "price": 25.00,
-      "image": "../assets/image/carne/carne-arroz-salada.jpg",
+      "image": "../assets/image/carne/carne-arroz-Salada.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 28,
       "title": "Bife de carne com fritas",
-      "category": "carne",
+      "category": "Carne",
       "price": 25.00,
       "image": "../assets/image/carne/carne-assada-fritas.jpg",
       "description":
@@ -254,17 +227,17 @@
     },
     {
       "id": 29,
-      "title": "Bife de carne com com salada",
-      "category": "carne",
+      "title": "Bife de carne com com Salada",
+      "category": "Carne",
       "price": 25.00,
-      "image": "../assets/image/carne/carne-bife-molho-batata-salada.jpg",
+      "image": "../assets/image/carne/carne-bife-molho-batata-Salada.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 30,
       "title": "Carne ao molho madeira",
-      "category": "carne",
+      "category": "Carne",
       "price": 25.00,
       "image": "../assets/image/carne/carne-molho-madeira.jpg",
       "description":
@@ -273,99 +246,99 @@
     {
       "id": 31,
       "title": "Bolo de chocolate e baunilha",
-      "category": "sobremesa",
+      "category": "Sobremesa",
       "price": 25.00,
-      "image": "../assets/image/sobremesa/bolo-chocolate-baunilha.jpg",
+      "image": "../assets/image/Sobremesa/bolo-chocolate-baunilha.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 32,
       "title": "Bolo de chocolate e morango",
-      "category": "sobremesa",
+      "category": "Sobremesa",
       "price": 25.00,
-      "image": "../assets/image/sobremesa/bolo-de-chocolate-morango.jpg",
+      "image": "../assets/image/Sobremesa/bolo-de-chocolate-morango.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 33,
       "title": "Bolo de frutas",
-      "category": "sobremesa",
+      "category": "Sobremesa",
       "price": 25.00,
-      "image": "../assets/image/sobremesa/bolo-frutas.jpg",
+      "image": "../assets/image/Sobremesa/bolo-frutas.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 34,
       "title": "Bolo de gelado de frutas vermelhas",
-      "category": "sobremesa",
+      "category": "Sobremesa",
       "price": 25.00,
-      "image": "../assets/image/sobremesa/bolo-gelado.jpg",
+      "image": "../assets/image/Sobremesa/bolo-gelado.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 35,
       "title": "Brownie e sorvete",
-      "category": "sobremesa",
+      "category": "Sobremesa",
       "price": 25.00,
-      "image": "../assets/image/sobremesa/brownie-sorvete.jpg",
+      "image": "../assets/image/Sobremesa/brownie-sorvete.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 36,
       "title": "Pudim",
-      "category": "sobremesa",
+      "category": "Sobremesa",
       "price": 25.00,
-      "image": "../assets/image/sobremesa/pudim.jpg",
+      "image": "../assets/image/Sobremesa/pudim.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 37,
       "title": "Milk Sheke chocolate",
-      "category": "sobremesa",
+      "category": "Sobremesa",
       "price": 25.00,
-      "image": "../assets/image/sobremesa/shake-chocolate.jpg",
+      "image": "../assets/image/Sobremesa/shake-chocolate.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 38,
       "title": "Milk Sheke Morango",
-      "category": "sobremesa",
+      "category": "Sobremesa",
       "price": 25.00,
-      "image": "../assets/image/sobremesa/shake-morango.jpg",
+      "image": "../assets/image/Sobremesa/shake-morango.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 39,
       "title": "Milk Sheke Oreo",
-      "category": "sobremesa",
+      "category": "Sobremesa",
       "price": 25.00,
-      "image": "../assets/image/sobremesa/shake-oreo.jpg",
+      "image": "../assets/image/Sobremesa/shake-oreo.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 40,
       "title": "Refrigerante",
-      "category": "bebida",
+      "category": "Bebidas",
       "price": 25.00,
-      "image": "../assets/image/bebida/bebida-refrigerante.jpg",
+      "image": "../assets/image/Bebidas/Bebidas-refrigerante.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     },
     {
       "id": 41,
       "title": "Suco",
-      "category": "bebida",
+      "category": "Bebidas",
       "price": 25.00,
-      "image": "../assets/image/bebida/bebida-suco-melancia.jpg",
+      "image": "../assets/image/Bebidas/Bebidas-suco-melancia.jpg",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos aliquid labore quae consequuntur ratione praesentium ad porro, nam expedita"
     }

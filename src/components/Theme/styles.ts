@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Container = styled.main`
+export const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
@@ -19,7 +19,7 @@ export const Navigation = styled.aside`
   }
 `
 
-export const Content = styled.section`
+export const Content = styled.main`
   flex: 1;
   display: flex;
 `

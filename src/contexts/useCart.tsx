@@ -61,6 +61,7 @@ export function CartProvider({ children } : CartProviderProps) : JSX.Element{
         alert('Adicionado com successo!');
         updatedCart.push({
           ...product,
+          price: product.price * 100,
           amount: 1
         }) 
       }
@@ -110,7 +111,6 @@ export function CartProvider({ children } : CartProviderProps) : JSX.Element{
    }
   }
  
-
   return (
     <CartContext.Provider value={{cart, addProduct, removeProduct, updateAmountProduct}}>
       { children }

@@ -2,7 +2,7 @@ import * as icon from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { Container } from './style'
 
-export default function Nav() {
+export function SideBar() {
   return(
     <>
       <Container>

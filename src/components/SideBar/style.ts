@@ -15,7 +15,7 @@ export const Container = styled.nav`
   li{
     width: 100%;
     flex-direction: column;
-    @media (min-width: 768px) {
+    @media (min-width: 778px) {
       flex-direction: row;
     }
     
@@ -40,21 +40,36 @@ export const Container = styled.nav`
         align-items: center;
         position: relative;
         color: white;
+        gap:0.2em;
 
         .iconSidebar{
-          width: 2em;
-          height: 2em;
+          width: 1.5em;
+          height: 1.5em;
         }
 
         p{
-          display: none;
+          font-size: 0.8em;
         }
 
-        @media (min-width: 668px) {
+        @media (min-width: 678px) {
+
+          .iconSidebar{
+            width: 2em;
+            height: 2em;
+          }
+
+          p{
+            display: none;
+          }
+
           &:hover{
+            .iconSidebar{
+              display: initial;
+            }
+
             p{
               position: absolute;
-              top: 1.8em;
+              top: 3em;
               display: initial;
             }
           } 

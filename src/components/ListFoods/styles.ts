@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin-top: 1em;
+  @media (min-width: 375px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 3em;
+  }
+
+  margin-top: 2em;
   flex: 1 0 0;
   /* display: grid;
   grid-template-columns: repeat(3, 1fr); */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 4em;
+  
+  
   overflow-y: scroll;
 
   &::-webkit-scrollbar{
@@ -49,6 +54,16 @@ export const Container = styled.div`
       padding: 1em;
       background: black;
       color: white;
+    }
+
+    & + div {
+      margin-top: 2em;
+    } 
+
+    @media (min-width: 375px) {
+      & + div {
+        margin-top: 0;
+      } 
     }
   }
 `

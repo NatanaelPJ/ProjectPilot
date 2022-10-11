@@ -3,9 +3,8 @@ import { getFoods } from "../../services/server/food";
 import { ListFoods } from "../../components/ListFoods";
 import { PropsFoods } from "../../services/server/food/types";
 import { Theme } from "../../components/Theme";
-import { ButtonsCategory } from "../../components/ButtonsCategoty";
-import Footer from "../../components/Footer";
-import { ContentMenu } from './styles';
+import { ContentSectionMenu } from './styles';
+import { MenuHamburguer } from '../../components/MenuHamburguer';
 
 export default function Menu(){
   const [foods, setFoods] = useState<PropsFoods[]>([])
@@ -23,15 +22,19 @@ export default function Menu(){
   return (
     <>
       <Theme>
-        <ContentMenu>
-            <h1>SUSHI FOOD</h1>
-            <ButtonsCategory foods={foods} />
+        <ContentSectionMenu>
+            <header>
+              <h1>Menu</h1>
+              <MenuHamburguer foods={foods} />
+            </header>
             <ListFoods foods={foods}/>
-            <button className='LoadMore'>
+            {/* <button className='LoadMore'>
               Load more
-            </button>
-            <Footer />
-          </ContentMenu>
+            </button> */}
+            <footer>
+              <p>Copyright © 2022 Natanael de Paulo.</p>
+            </footer>
+        </ContentSectionMenu>
       </Theme>
     </>
   )

@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
-import Nav from "../SideBar";
-
+import { SideBar } from "../SideBar";
 import { Container, Content, Navigation } from "./styles";
 
 
@@ -13,7 +12,7 @@ export function Theme({ children }: Props){
     <>
       <Container>
         <Navigation>
-          <Nav/>
+          <SideBar/>
         </Navigation>
         <Content>
           { children }

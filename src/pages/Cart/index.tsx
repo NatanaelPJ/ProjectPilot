@@ -12,18 +12,18 @@ export default function Cart(){
   const cartFormatted = cart.map(product => ({
     ...product,
     priceFormatted: formatPrice(product.price),
-    subTotal: product.price * product.amount
+    subTotal: (product.price / 100 ) * product.amount 
   }))
 
   const total = formatPrice(
     cart.reduce((acc, cur) => {
-    return acc + cur.price * cur.amount
+    return acc + (cur.price / 100) * cur.amount
   }, 0)
   )
 
   console.log('tttt', total);
   
-  
+
   const handleProductIncrement = (product: PropsFoods) => {
     updateAmountProduct({productId: product.id, amount: product.amount + 1})
   }
