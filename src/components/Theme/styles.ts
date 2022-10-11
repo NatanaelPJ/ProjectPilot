@@ -6,13 +6,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column-reverse;
 
-  @media (min-width: 768px) {
+  @media (min-width: 678px) {
     flex-direction: initial;
   }
 `
 
-export const Navigation = styled.aside`
-  @media (min-width: 768px) {
+export const Navigation = styled.div`
+  @media (min-width: 678px) {
     padding: 1em 0.5em;
     flex:0 0 6em; 
     height: 100%;

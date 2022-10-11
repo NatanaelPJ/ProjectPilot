@@ -1,20 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media (min-width: 375px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; 
-    gap: 3em;
-  }
-
   margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 3em;
+ 
   flex: 1 0 0;
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
-  
-  
+
   overflow-y: scroll;
 
   &::-webkit-scrollbar{
@@ -22,28 +16,44 @@ export const Container = styled.div`
   }
 
   div{
+    background: whitesmoke;
+    max-width: 12em;
+    width: 100%;
+    height: 18em;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 11em;
-    width: 100%;
-    height: 20em;
+    justify-content: space-around;
     gap: 0.5em;
+    border-radius: 0.8em;
+    padding:0.5em;
     
-    img{   
+   
+    .infoFood{
       width: 100%;
       height: 11em;
-      object-fit: cover;
-    }
+      border:none;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
 
-    p{
-      text-align: center;
-      font-size: 1.25em;
-      
-    }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
 
-    span{
-      flex: 1;
+      p{
+        display: none;
+        text-align: center;
+        font-size: 1.25em;
+      }
+
+      span{
+        display: none;
+      }
     }
 
     button{
@@ -54,16 +64,28 @@ export const Container = styled.div`
       padding: 1em;
       background: black;
       color: white;
+      border-radius: 2em;
     }
 
-    & + div {
-      margin-top: 2em;
-    } 
+    &:hover{
+   
+     
+      img{   
+        display:none;
+      }
 
-    @media (min-width: 375px) {
-      & + div {
-        margin-top: 0;
-      } 
+      p{
+      
+        display: flex;
+        
+      }
+
+      span{
+        display: flex;
+      }
     }
+
+
+    
   }
 `

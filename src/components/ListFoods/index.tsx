@@ -20,9 +20,11 @@ export function ListFoods({ foods }: IProps){
       <Container>
         {foods.map(product => (
           <div key={product.id}>
-            <img src={img} alt={product.title} loading={'lazy'}/>
-            <p>{product.title}</p>
-            <span>{formatPrice(product.price)}</span>
+            <div className='infoFood'>
+              <img src={img} alt={product.title} loading={'lazy'}/>
+              <p>{product.title}</p>
+              <span>{formatPrice(product.price)}</span>
+            </div>
             <button 
               type="button"
               onClick={() => {

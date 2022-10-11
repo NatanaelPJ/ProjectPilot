@@ -7,7 +7,7 @@ export const Container = styled.nav`
   color: white;
   border-radius: 0;
   background: black;
-  @media (min-width: 768px) {
+  @media (min-width: 678px) {
     border-radius: 1em;
   }
 
@@ -81,7 +81,7 @@ export const Container = styled.nav`
 
 
 
-    @media (min-width: 768px) {
+    @media (min-width: 678px) {
       flex-direction: column;
       justify-content: space-around;
       padding: 1em 0;
