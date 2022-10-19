@@ -6,8 +6,9 @@ import { useCart } from "../../contexts/useCart";
 import { formatPrice } from "../../util/format";
 import { PropsFoods } from "../../services/server/food/types";
 
-export default function Cart(){
 
+
+export default function Cart(){
   const { cart, removeProduct, updateAmountProduct } = useCart()
   const cartFormatted = cart.map(product => ({
     ...product,
@@ -21,9 +22,6 @@ export default function Cart(){
   }, 0)
   )
 
-  console.log('tttt', total);
-  
-
   const handleProductIncrement = (product: PropsFoods) => {
     updateAmountProduct({productId: product.id, amount: product.amount + 1})
   }
@@ -36,13 +34,11 @@ export default function Cart(){
     removeProduct(productId)
   }
 
-
   return(
     <>
       <Theme>
         <ContentBox>
           <h1>Cart</h1>
-          
           <ProductTable>
             <thead>
               <tr>
@@ -109,8 +105,6 @@ export default function Cart(){
                 Confirm Order
             </button>
           </PriceTable>
-          
-    
         </ContentBox>
       </Theme>
     </>

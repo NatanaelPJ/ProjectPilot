@@ -12,9 +12,11 @@ export function ButtonsCategory ({ foods, showMenu, active } : IProps){
 
   const carne = foods.map(product => product).filter(product => product.category === "Carne")
 
-  const categoryDisplayButtons = foods.map(product => product ).reduce((initialValue : String[], currentValue) => {
+  const buttonByCategory = foods.map(product => product ).reduce((initialValue : String[], currentValue) => {
     return initialValue.includes(currentValue.category)? initialValue : [...initialValue, currentValue.category]
-  },[]).sort((a,b) => {
+  },[])
+  
+  const orderCategoryButons = buttonByCategory.sort((a,b) => {
       if(a > b){
         return 1
       } else if(a < b) {
@@ -23,19 +25,16 @@ export function ButtonsCategory ({ foods, showMenu, active } : IProps){
         return 0      
       }
   })
+  
 
-
-
-
-
-  categoryDisplayButtons.unshift("Todos")
+  orderCategoryButons.unshift("Todos")
 
   return(
     <>
       <Container active={active}>
         <MdClose className='iconClose' width={24} height={24} onClick={showMenu} style={{cursor: 'pointer'}}/>
         <ItemsButtons>
-          {categoryDisplayButtons.map((item, index) => (
+          {orderCategoryButons.map((item, index) => (
             <li key={index}>
               <button  className='categoryButtons' onClick={() => carne}>
                 {item}

@@ -9,12 +9,11 @@ export const Container = styled.div`
  
   flex: 1 0 0;
 
-  overflow-y: scroll;
+  overflow: scroll;
 
   &::-webkit-scrollbar{
     display: none;
   }
-
   div{
     background: whitesmoke;
     max-width: 12em;
@@ -28,7 +27,7 @@ export const Container = styled.div`
     gap: 0.5em;
     border-radius: 0.8em;
     padding:0.5em;
-    
+ 
    
     .infoFood{
       width: 100%;
