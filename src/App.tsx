@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { CartProvider } from "./contexts/useCart";
-import Routes from "./routes";
+import { PageRoutes } from "./routes";
 import { GlobalStyle } from "./styles/global";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <GlobalStyle />
-          <Routes/>
+          <PageRoutes/>
         </CartProvider>
       </BrowserRouter>
     </>

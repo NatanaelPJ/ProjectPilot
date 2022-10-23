@@ -8,7 +8,7 @@ interface IProps {
   foods: PropsFoods[]
 }
 
-export function MenuHamburguer( { foods}: IProps){
+export function MenuButtons({ foods}: IProps){
 
   const [active, setActive] = useState(false)
 

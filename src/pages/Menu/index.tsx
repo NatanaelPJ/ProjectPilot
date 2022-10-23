@@ -4,7 +4,7 @@ import { ListFoods } from "../../components/ListFoods";
 import { PropsFoods } from "../../services/server/food/types";
 import { Theme } from "../../components/Theme";
 import { ContentSectionMenu } from './styles';
-import { MenuHamburguer } from '../../components/MenuHamburguer';
+import { MenuButtons } from '../../components/MenuButtons';
 
 export default function Menu(){
   const [foods, setFoods] = useState<PropsFoods[]>([])
@@ -14,6 +14,7 @@ export default function Menu(){
       const response = await getFoods()
       setFoods(response)
     }
+    
     loadFoods()
     
   },[])
@@ -25,7 +26,7 @@ export default function Menu(){
         <ContentSectionMenu>
             <header>
               <h1>Menu</h1>
-              <MenuHamburguer foods={foods} />
+              <MenuButtons foods={foods} />
             </header>
             <ListFoods foods={foods}/>
             {/* <button className='LoadMore'>
