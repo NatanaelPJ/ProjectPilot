@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     font-size: 1em;
@@ -28,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a{
     text-decoration: none;
+    color: black;
   }
   
   ul,
