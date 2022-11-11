@@ -5,20 +5,24 @@ import { PropsFoods } from "../../services/server/food/types";
 import { Theme } from "../../components/Theme";
 import { ContentSectionMenu } from './styles';
 import { MenuButtons } from '../../components/MenuButtons';
+import { InputSearch } from '../../components/Input';
 
 export default function Menu(){
   const [foods, setFoods] = useState<PropsFoods[]>([])
 
   useEffect(() => {
-    async function loadFoods(){
-      const response = await getFoods()
-      setFoods(response)
-    }
-    
+   
     loadFoods()
-    
   },[])
-
+  
+  async function loadFoods(){
+    const response = await getFoods()
+    console.log(response);
+    
+    setFoods(response)
+  }
+  
+  
 
   return (
     <>
@@ -26,9 +30,11 @@ export default function Menu(){
         <ContentSectionMenu>
             <header>
               <h1>Menu</h1>
-              <MenuButtons foods={foods} />
             </header>
-            <ListFoods foods={foods}/>
+            <InputSearch/>
+            <div className='contentListFoods'>
+              <ListFoods foods={foods}/>
+            </div>
             {/* <button className='LoadMore'>
               Load more
             </button> */}

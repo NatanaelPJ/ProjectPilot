@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.nav`
   width: 100%;
   height: 100%;
-  flex: 1;
   color: white;
   border-radius: 0;
   background: black;

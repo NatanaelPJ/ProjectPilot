@@ -1,90 +1,60 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin-top: 2em;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; 
-  gap: 3em;
- 
-  flex: 1 0 0;
+  flex-direction: column;
+  gap: 2em;
 
-  overflow: scroll;
 
-  &::-webkit-scrollbar{
-    display: none;
-  }
   div{
-    background: whitesmoke;
-    max-width: 12em;
     width: 100%;
-    height: 18em;
-
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 0.5em;
-    border-radius: 0.8em;
-    padding:0.5em;
- 
    
-    .infoFood{
-      width: 100%;
-      height: 11em;
-      border:none;
-      border-radius: 50%;
+
+    .column1{
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      text-align: center;
 
       img{
-        width: 100%;
-        height: 100%;
+        margin: 0 auto;
         object-fit: cover;
+        width: 8em;
+        height: 8em;
         border-radius: 50%;
       }
 
       p{
-        display: none;
-        text-align: center;
-        font-size: 1.25em;
+        margin: 0.5em 0;
       }
 
       span{
-        display: none;
+        color: #F24F04;
       }
     }
 
-    button{
-      background: black;
-      margin: 0;
-      max-width: 11em;
-      width: 100%;
-      padding: 1em;
-      background: black;
-      color: white;
-      border-radius: 2em;
-    }
+    .column2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1em;
 
-    &:hover{
-   
-     
-      img{   
-        display:none;
-      }
 
-      p{
-      
-        display: flex;
-        
-      }
-
-      span{
-        display: flex;
+      button{
+        background: black;
+        max-width: 8em;
+        width: 100%;
+        height: 3em;
+        padding: 0.5em;
+        background: black;
+        color: white;
+        border-radius: 2em;
       }
     }
-
-
-    
   }
+
+
+
+  
 `

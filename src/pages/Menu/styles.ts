@@ -1,20 +1,22 @@
 import styled from "styled-components";
 
 export const ContentSectionMenu = styled.section`
-  flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 1em 1em 0;
+
 
   header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     gap: 0.5em;
     position: relative;
-
-    
     h1{
-      text-align: left;
+      font-size: 2em;
+      margin: 0 auto;
     }
 
 
@@ -23,6 +25,14 @@ export const ContentSectionMenu = styled.section`
     }
   }
 
+  .contentListFoods{
+    margin: 2em 0;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
   .LoadMore {
     margin: 2em auto;
     max-width: 11em;
@@ -40,4 +50,7 @@ export const ContentSectionMenu = styled.section`
       margin: 0 auto;
     }
   }
+
+
+  
 `

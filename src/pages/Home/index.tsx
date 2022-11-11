@@ -6,7 +6,6 @@ import hotel from "../../assets/hotel.png"
 import { Container } from "./styles";
 import banner from '../../assets/homeBanner.png'
 import {MdArrowForward } from 'react-icons/md'
-import { Carousel } from "../../components/Carrosel";
 
 // export default function Home( ) {
 //   const [autoPlay] = useState(true)
@@ -35,7 +34,7 @@ export default function Home() {
   return(
     <>
       <Container>
-        <img src={banner} alt="banner of hamburguer" />
+        <img src={banner} alt="Image of hamburgues" />
         <div className="presentacion">
           <p>Delicious And Easy </p>
           <p>Food To Make For You</p>

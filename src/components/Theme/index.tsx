@@ -11,12 +11,12 @@ export function Theme({ children }: Props){
   return(
     <>
       <Container>
-        <Navigation>
-          <SideBar/>
-        </Navigation>
         <Content>
           { children }
         </Content>
+        <Navigation>
+          <SideBar/>
+        </Navigation>
       </Container>
     </>
   )
